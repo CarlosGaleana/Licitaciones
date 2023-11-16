@@ -10,3 +10,6 @@ https://prod2.seace.gob.pe/seacebus-uiwd-pub/buscadorPublico/buscadorPublico.xht
 Mercado Publico Chile
 https://www.mercadopublico.cl/Home
 (Ingresar con credenciales de JP)
+
+
+/seacebus-uiwd-pub/javax.faces.resource/dynamiccontent.properties.xhtml;jsessionid=H1pr-zUMuswsMDJ71eN5sI6wQhfdJoiJzayVp5Sp.slave2:seace-main?ln=primefaces&pfdrid=pfdrid_21b9dc8a-6886-4088-a282-a4f6da5ed208
