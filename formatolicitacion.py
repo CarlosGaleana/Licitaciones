@@ -52,7 +52,7 @@ class InterfazGrafica:
             if dfin.empty:
                 self.mostrar_mensaje("No se pudo procesar el archivo")
             else:
-                dfin.to_excel(self.ruta_nombre_archivo+'.xlsx')
+                dfin.to_excel(self.ruta_nombre_archivo+'.xlsx',index=False)
                 self.mostrar_mensaje("La ejecución ha terminado")
         else:
             self.mostrar_mensaje("Por favor selecciona la ruta del archivo y la ruta y nombre del archivo")
