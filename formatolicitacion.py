@@ -7,29 +7,29 @@ import re
 class InterfazGrafica:
     def __init__(self, master):
         self.master = master
-        master.title("Formato Licitaciones ChileCompra")
+        master.title("ChileCompra - Consumo Computadores Convenio Marco")
 
         # Fondo de la ventana
-        master.configure(bg='#E3F2FD')
+        master.configure(bg='#E3E7FD')
 
         # Establecer el estilo
         self.estilo = ttk.Style()
-        self.estilo.configure('TButton', font=('calibri', 10, 'bold'), borderwidth='4', background='#2196F3', foreground='#FFFFFF')
+        self.estilo.configure('TButton', font=('calibri', 10, 'bold'), borderwidth='6', background='#2196F3', foreground='#FFFFFF')
 
         # Etiqueta de descripción
-        self.label_descripcion = tk.Label(master, text="Programa que realiza el formato de los archivos de Chile compra.\n Favor de seleccionar las siguientes rutas: ", font=('calibri', 12), bg='#E3F2FD')
+        self.label_descripcion = tk.Label(master, text="Programa que realiza el formato de datos de Consumo de Computadores en Convenio Marco ChileCompra.\n Favor de seleccionar las siguientes rutas: ", font=('calibri light', 11), bg='#E3E7FD')
         self.label_descripcion.pack(pady=10)
 
         # Botón para seleccionar la ruta del archivo
-        self.btn_ruta_archivo = tk.Button(master, text="Seleccionar Ruta del Archivo", command=self.seleccionar_ruta_archivo, width=30, bg='#1976D2', fg='#FFFFFF')
+        self.btn_ruta_archivo = tk.Button(master, text="Seleccionar Archivo con Datos Crudos", command=self.seleccionar_ruta_archivo, width=40, bg='#1976D2', fg='#FFFFFF')
         self.btn_ruta_archivo.pack(pady=10)
 
         # Botón para seleccionar la ruta y nombre del archivo
-        self.btn_ruta_nombre_archivo = tk.Button(master, text="Seleccionar Ruta y Nombre del Archivo", command=self.seleccionar_ruta_nombre_archivo, width=30, bg='#1565C0', fg='#FFFFFF')
+        self.btn_ruta_nombre_archivo = tk.Button(master, text="Seleccionar Ruta y Nombre del Archivo de Salida", command=self.seleccionar_ruta_nombre_archivo, width=40, bg='#1976D2', fg='#FFFFFF')
         self.btn_ruta_nombre_archivo.pack(pady=10)
 
         # Botón para correr
-        self.btn_correr = tk.Button(master, text="Correr", command=self.correr_accion, width=30, bg='#0D47A1', fg='#FFFFFF')
+        self.btn_correr = tk.Button(master, text="Ejecutar", command=self.correr_accion, width=20, bg='#0DA152', fg='#FFFFFF')
         self.btn_correr.pack(pady=10)
 
         self.ruta_archivo = ''
@@ -55,7 +55,7 @@ class InterfazGrafica:
                 dfin.to_excel(self.ruta_nombre_archivo+'.xlsx',index=False)
                 self.mostrar_mensaje("La ejecución ha terminado")
         else:
-            self.mostrar_mensaje("Por favor selecciona la ruta del archivo y la ruta y nombre del archivo")
+            self.mostrar_mensaje("Por favor seleccionar la ruta del archivo y la ruta y nombre del archivo")
 
     def mostrar_mensaje(self, mensaje):
         messagebox.showinfo("Mensaje", mensaje)
